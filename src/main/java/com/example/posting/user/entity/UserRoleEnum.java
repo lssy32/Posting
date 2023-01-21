@@ -1,2 +1,6 @@
-package com.example.posting.user.entity;public enum UserRoleEnum {
+package com.example.posting.user.entity;
+
+public enum UserRoleEnum {
+    USER,
+    ADMIN
 }
