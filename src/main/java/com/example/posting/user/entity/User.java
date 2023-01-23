@@ -26,6 +26,6 @@ public class User {
         this.role = role;
     }
     public String getUserPassword(){
-        return user.getPassword();
+        return password;
     }
 }
