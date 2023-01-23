@@ -18,6 +18,7 @@ import java.io.IOException;
 @Slf4j
 @RequiredArgsConstructor
 public class JwtAuthFilter extends OncePerRequestFilter {
+    // 이거는 스프링 시큐리티임
     private final JwtUtil jwtUtil;
 
     @Override

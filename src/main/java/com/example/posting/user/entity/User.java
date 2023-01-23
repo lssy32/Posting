@@ -1,10 +1,8 @@
 package com.example.posting.user.entity;
 
-import com.example.posting.user.dto.SignupRequestDto;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import javax.lang.model.element.Name;
 import javax.persistence.*;
 
 @Entity(name = "Users")
@@ -27,7 +25,7 @@ public class User {
         this.password = password;
         this.role = role;
     }
-    public String getUserPassword(User user){
+    public String getUserPassword(){
         return user.getPassword();
     }
 }
