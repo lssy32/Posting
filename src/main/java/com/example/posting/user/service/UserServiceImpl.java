@@ -44,7 +44,7 @@ public class UserServiceImpl implements UserService {
         String userId = loginRequestDto.getUserId();
         String password = passwordEncoder.encode(loginRequestDto.getPassword());
         User user = userRepository.findByUserId(userId).orElseThrow(() -> new IllegalArgumentException("존재하지 않는 유저입니다."));
-        if (!user.getUserPassword().equals(password)){
+        if (!passwordEncoder.matches(password, user.getPassword())) {
             new IllegalArgumentException("비밀번호가 다릅니다.");
         }
         response.addHeader(jwtUtil.AUTHORIZATION_HEADER,jwtUtil.createToken(userId, user.getRole()));
